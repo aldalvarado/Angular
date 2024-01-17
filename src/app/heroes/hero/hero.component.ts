@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-heroes-hero',
   standalone: true,
-  template: "Hero Works"
+  templateUrl: "./hero.component.html"
 })
 
 export class HeroComponent {
-
+  public name: string = "Iron Man";
+  public age: number = 45;
 }
