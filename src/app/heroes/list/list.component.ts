@@ -9,5 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-  public HeroNames: string[] = ["Spider Man", "Iron Man", "Hulk", "Thor", "She-Hulk"]
+  public HeroNames: string[] = ["Spider Man", "Iron Man", "Hulk", "Thor", "She-Hulk"];
+  public DeletedHeroes?: string;
+  RemoveLastHero():void {
+   this.DeletedHeroes = this.HeroNames.pop();
+  }
 }
