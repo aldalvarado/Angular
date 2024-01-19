@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-
+  public HeroNames: string[] = ["Spider Man", "Iron Man", "Hulk", "Thor", "She-Hulk"]
 }
