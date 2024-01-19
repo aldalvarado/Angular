@@ -10,10 +10,16 @@
   <dd> {{CapitalizedName}} </dd>
 </dl>
 
-<button (click)="ChangeName()" class="btn btn-primary mx-2">
+<button
+  *ngIf="name !== 'Spider Man'"
+  (click)="ChangeName()"
+  class="btn btn-primary mx-2">
   Cambiar Nombre
 </button>
-<button (click)="ChangeAge()" class="btn btn-primary mx-2">
+<button
+  *ngIf="age !== 23"
+  (click)="ChangeAge()"
+  class="btn btn-primary mx-2">
   Cambiar Edad
 </button>
 <button (click)="ResetHeroes()" class="btn btn-primary">
