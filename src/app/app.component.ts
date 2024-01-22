@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { CountersComponent } from './counter/counters.component';
+import { CounterComponent } from './counter/Components/counter/counter.component';
 import { HeroesComponent } from './heroes/heroes.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, CountersComponent, HeroesComponent],
+  imports: [CommonModule, RouterOutlet, CounterComponent , HeroesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent{
-  public title: string = "Aqui verdad?"
+  public title: string = "Hello World"
 }
