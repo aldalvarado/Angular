@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Personaje } from '../../interfaces/character.interface';
+import { Component, Input } from '@angular/core';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-dbz-list',
@@ -9,8 +9,8 @@ import { Personaje } from '../../interfaces/character.interface';
 })
 
 export class DbzListComponent {
-  @import()
-  public CharacterList: Personaje[] =[{
+  @Input()
+  public CharacterList: Character[] =[{
     name: "Trunks",
     power: 10
   }]
