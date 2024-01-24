@@ -3,13 +3,16 @@
  <li *ngFor="let Personaje of CharacterList;
  let i = index;
  let isFirst = first;
- let isLast = last"
- class="list-group-item">
+ let isLast = last;
+ let isEven = even;
+ let isOdd = odd"
+ class="list-group-item"
+ [ngClass]="{
+  'list-group-item-success': isFirst,
+  'list-group-item-dark': isLast}" >
  <span class="text-primary"> {{ i + 1 }}. </span>
  <span>{{ Personaje.name }}</span> -
  <strong>Power: </strong>
  <span>{{ Personaje.power }}. </span>
- <span>Es el primero: {{ isFirst }}. </span>
- <span>Es el último: {{ isLast }}. </span>
 </li>
 </ul>
