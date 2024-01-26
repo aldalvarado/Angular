@@ -19,7 +19,6 @@ export class AddCharacterComponent {
     power: 0
   }
   EmiotCHaracter(): void{
-    console.log(this.character);
     if ( this.character.name.length === 0 ) return;
     this.OnNewCharacter.emit(this.character);
     this.character = {name: "", power: 0};
