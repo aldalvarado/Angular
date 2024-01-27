@@ -3,7 +3,7 @@
 <div class class="row">
   <div class="col">
     <app-dbz-list [CharacterList]="DbzService.Characters"
-    (OnDelete)="DbzService.OnDeleteCharacter($event)"></app-dbz-list>
+    (OnDelete)="DbzService.DeleteCharacterByID($event)"></app-dbz-list>
   </div>
   <div class="col">
     <app-dbz-add-character (OnNewCharacter)="DbzService.OnNewCharacter($event)" ></app-dbz-add-character>
