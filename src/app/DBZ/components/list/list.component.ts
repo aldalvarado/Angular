@@ -11,14 +11,17 @@ import { Character } from '../../interfaces/character.interface';
 export class DbzListComponent {
   @Input()
   public CharacterList: Character[] =[{
+    id: "",
     name: "Trunks",
     power: 10
   }]
 
   @Output()
-  public OnDelete: EventEmitter<number> = new EventEmitter();
+  public OnDelete: EventEmitter<string> = new EventEmitter();
 
-  DeleteCharacter(index:number):void{
-    this.OnDelete.emit(index);
+  DeleteCharacter(id?:string):void{
+    if (!id) return;
+    console.log({id});
+    this.OnDelete.emit(id);
   }
 }
