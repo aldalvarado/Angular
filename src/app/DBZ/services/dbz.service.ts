@@ -21,7 +21,7 @@ export class DBZService{
     power: 7500,
   }];
 
-  OnNewCharacter(character: Character): void {
+  AddCharacter(character: Character): void {
     const NewCharacter: Character = { id: uuid(), ...character };
     this.Characters.push(NewCharacter);
   }
